@@ -29,8 +29,3 @@ if __name__ == '__main__':
     from db import db
     db.init_app(app)
     app.run(port=5000, debug=True)
-    
-# if __name__ == '__main__': # ensures that the app only runs when its the main file
-#     from db import db
-#     db.init_app(app) #importing here because circular import [our item models will import this as well, so it will loop]
-#     app.run(port=5000, debug=True) #shows more helpful error messages
